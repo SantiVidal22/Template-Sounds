@@ -38,7 +38,6 @@ header{
     top: 0;
 }
 .logo{
-    height: 40%;
     cursor: pointer;
 }
 .navbar,
@@ -124,9 +123,6 @@ main{
 }
 .hero-card{
     width: 50%;
-}
-.hero-card img{
-    border-radius: 15px;
 }
 #info{
     display: flex;
