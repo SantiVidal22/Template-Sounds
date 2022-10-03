@@ -30,6 +30,9 @@
     box-sizing: border-box;
     color: var(--text-white);
 }
+html, body{
+    height: 100%;
+}
 header{
     background: var(--nav-bg);
     display: flex;
@@ -176,7 +179,7 @@ main{
     font-family: 'HelveticaNeueCyr', sans-serif;
     letter-spacing: 2pt;
 }
-#studio h2, #rates h2, #sesion-container h2{
+#studio h2, #rates h2, #sesion-container h2, #contact h1{
     font-family: 'Lulo', sans-serif;
 }
 .studio-img{
@@ -302,6 +305,44 @@ textarea{
 .form .form-btn{
     display: flex;
     justify-content: flex-end;
+}
+#contact{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 70px 0;
+    height: 100vh;
+    justify-content: center;
+    gap: 30px;
+}
+#contact h1{
+    text-align: center;
+}
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+}
+.info-contact{
+    padding: 70px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+.info-contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.info-contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer{
+    display: flex;
+    background: var(--nav-bg);
 }
 #menu-toggle, .menu-label{
     display: none;
