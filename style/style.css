@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helveticaneuecyr-2');
 @font-face{
     font-family: 'Lulo';
     src: url('../fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf');
 }
 :root{
-    --background: rgba(0, 0, 0, 0.904);
     --primary: rgb(77, 87, 170);
-    --secondary: rgb(53, 55, 61);
-    --btn-bg: rgba(0, 0, 0, 0.616);
-    --btn-bg-white: rgba(255, 255, 255, 0.692);
+    --secondary: transparent;
     --bg-azul-10: blue;
     --bg-white: rgba(255, 255, 255, 0.801);
     --bg-electric: black;
-    --nav-bg: rgba(0, 0, 0, 0.829);
-    --text-gray: rgba(255, 255, 255, 0.712);
-    --text-white: white;
+
+    --background: rgba(0, 0, 0, 0.863);
+    --nav-bg: rgb(53, 55, 61);
+    --nav-bg-mobile: rgba(0, 0, 0, 0.411);
+    --btn-bg-black: rgba(0, 0, 0, 0.616);
+    --btn-bg-white: rgba(255, 255, 255, 0.89);
+    --text-white: rgba(255, 255, 255, 0.89);
+    --text-black: black;
 }
 *{
     margin: 0;
@@ -25,9 +28,10 @@
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     box-sizing: border-box;
+    color: var(--text-white);
 }
 header{
-    background: var(--secondary);
+    background: var(--nav-bg);
     display: flex;
     height: 65px;
     justify-content: space-between;
@@ -53,10 +57,8 @@ header{
     gap: 30px;
 }
 .navbar-list a{
-    letter-spacing: 1pt;
+    letter-spacing: 2pt!important;
     text-transform: uppercase;
-    color: var(--text-gray);
-    font-weight: 500;
     font-size: 14px;
 }
 .boton .b1, .boton .b2{
@@ -65,7 +67,6 @@ header{
 }
 .navbar-list li:first-child > a{
     color: rgb(0, 204, 255);
-    font-weight: 700;
 }
 .cart-icon{
     border: 1px solid var(--bg-electric);
@@ -83,7 +84,7 @@ main{
     width: 100%;
 }
 #hero{
-    width: 90%;
+    width: 95%;
     display: flex;
     height: 92vh;
     align-items: center;
@@ -94,19 +95,18 @@ main{
     flex-direction: column;
     gap: 40px;
     width: 50%;
+    padding-left: 35px;
 }
 .hero-info h1{
     font-family: 'Lulo', sans-serif;
-    font-size: 38px;
+    font-size: 50px;
     width: 70%;
-    color: var(--text-gray);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.13);
 }
 .hero-info p{
     font-size: 14px;
     line-height: 1.58rem;
     width: 70%;
-    color: var(--text-gray);
 }
 .boton a{
     border-radius: 18px;
@@ -122,37 +122,169 @@ main{
     gap: 40px;
 }
 .hero-card{
-    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.hero-card img{
+    width: 95%;
 }
 #info{
     display: flex;
-    min-height: 100vh;
+    padding: 70px 0px;
     width: 100%;
-    justify-content: start;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 50px;
 }
-.desc{
-    box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.356);
+.line{
+    width: 80%;
+    height: 1px;
+    background: black;
+}
+#info h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+.info-cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+.studio-cards-container{
+    display: flex;
+    gap: 140px;
+}
+.services img {
+    width: 50px;
+  }
+.services{
+    width: 300px;
+    height: 320px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    background: var(--bg-white);
-    width: 900px;
-    justify-content: center;
-    padding: 30px;
-    margin-top: 0px;
+    align-items: center;
+    text-align: center;
+    background: var(--secondary);
+    border-radius: 10px;
+    gap: 20px;
 }
-.desc h2{
-    padding-bottom: 10px;
-    color: rgba(0, 0, 0, 0.842);
+.services h3, .client-info h3, .rates-card h3, #sesion-container h3, .navbar-list a{
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    letter-spacing: 2pt;
+}
+#studio h2, #rates h2, #sesion-container h2{
     font-family: 'Lulo', sans-serif;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
 }
-.desc p{
-    line-height: 1.55rem;
+.studio-img{
+    display: flex;
+}
+#studio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0px;
+    width: 100%;
+    gap: 50px;
+}
+#studio p{
+    width: 65%;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 70px 0px;
+    align-items: center;
+}
+.client-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    gap: 15px;
+}
+.client-info div a{
+    display: flex;
+    min-width: 100%;
+    border: solid;
+    padding: 8px;
+}
+.client-info div a:hover{
+    color: rgb(0, 204, 255);
+}
+#rates{
+    display: flex;
+    padding-bottom: 70px;
+    width: 100%;
+    height: 70vh;
+    gap: 26px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.rates-card-container{
+    display: flex;
+    width: 99%;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.rates-card{
+    background-color: rgba(0, 0, 0, 0.658);
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    align-items: center;
+}
+.rates-card h3{
+    color: var(--text-white);
+    border-bottom: 1px solid white;
+}
+#sesion-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 70px 0;
+    gap: 50px;
+}
+.sesion{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.form{
+    display: flex;
+    width: 30%;
+}
+.form ul{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    position: relative;
+}
+.form ul li input{
+    padding: 0 10px 0 20px;
+    width: 100%;
+    height: 6ex;
+}
+textarea{
+    resize: none;
+    width: 100%;
 }
 .boton .b1{
-    background: var(--btn-bg);
+    background: var(--btn-bg-black);
     color: white;
 }
 .boton .b2{
@@ -160,10 +292,21 @@ main{
     background: var(--btn-bg-white);
     color: rgb(0, 0, 0);
 }
+.form ul li a{
+    padding: 2px 15px;
+    border: solid;
+}
+.form ul li a:hover{
+    color: rgb(0, 204, 255)
+}
+.form .form-btn{
+    display: flex;
+    justify-content: flex-end;
+}
 #menu-toggle, .menu-label{
     display: none;
 }
-@media (min-width: 300px) and (max-width: 700px){
+@media (min-width: 300px) and (max-width: 768px){
     .navbar-list{
         position: absolute;
         top: 65px;
@@ -171,7 +314,7 @@ main{
         right: 5%;
         width: 90%;
         flex-direction: column;
-        background: var(--nav-bg)!important;
+        background: var(--nav-bg-mobile)!important;
         border: 2px solid rgb(0, 204, 255);
         border-top: 0px;
         border-radius: 0px 0px 15px 15px;
@@ -239,5 +382,13 @@ main{
     .hero-card img{
         width: 99%;
         padding: 20px;
+    }
+    .studio-cards-container{
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px){
+    .studio-cards-container{
+        gap: 70px;
     }
 }
