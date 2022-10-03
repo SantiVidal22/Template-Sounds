@@ -142,7 +142,7 @@ main{
 }
 .line{
     width: 80%;
-    height: 1px;
+    height: 2px;
     background: black;
 }
 #info h2 {
@@ -346,6 +346,22 @@ footer{
 }
 #menu-toggle, .menu-label{
     display: none;
+}
+/* Global */
+.line{
+    animation-name: moverCaja;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* Animaciones */
+@keyframes moverCaja { 
+    0% { 
+        transform: translateX(0); 
+    } 
+    100% { 
+        transform: translateX(60px); 
+    } 
 }
 @media (min-width: 300px) and (max-width: 768px){
     .navbar-list{
