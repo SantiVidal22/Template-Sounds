@@ -32,7 +32,6 @@
 }
 html, body{
     height: 100%;
-    background: var(--nav-bg);
 }
 header{
     background: var(--nav-bg);
@@ -44,7 +43,7 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 999;
+    z-index: 9999;
 }
 .logo{
     cursor: pointer;
