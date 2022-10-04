@@ -43,6 +43,7 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 .logo{
     cursor: pointer;
@@ -275,7 +276,6 @@ main{
     flex-direction: column;
     gap: 32px;
     width: 100%;
-    position: relative;
 }
 .form ul li input{
     padding: 0 10px 0 20px;
