@@ -19,6 +19,7 @@
     --btn-bg-white: rgba(255, 255, 255, 0.89);
     --text-white: rgba(255, 255, 255, 0.89);
     --text-black: black;
+    --cielo: rgb(0, 204, 255);
 }
 *{
     margin: 0;
@@ -33,6 +34,9 @@
 html, body{
     height: 100%;
 }
+html{
+    scroll-behavior: smooth;
+}
 header{
     background: var(--nav-bg);
     display: flex;
@@ -43,7 +47,52 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 2;
+}
+.overlay{
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
     z-index: 1;
+    background: rgb(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+#menu-toggle:checked ~ .overlay {
+    display: block;
+}
+.navbar-list li {
+    position: relative;
+    padding: 0;
+}
+.navbar-list li a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--text-white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+}
+.navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+.hero-info a {
+    transition: all 0.2s ease-out;
+}
+.hero-info a:hover {
+    background-color: var(--cielo);
+    transition: all 0.2s ease-in;
+}
+.boton .b1:hover{
+    color: var(--text-black);
 }
 .logo{
     cursor: pointer;
@@ -70,7 +119,7 @@ header{
     letter-spacing: 1pt;
 }
 .navbar-list li:first-child > a{
-    color: rgb(0, 204, 255);
+    color: var(--cielo);
 }
 .cart-icon{
     border: 1px solid var(--bg-electric);
@@ -362,6 +411,45 @@ footer{
     100% { 
         transform: translateX(60px); 
     } 
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(100px);
+    } to {
+        transform: translateX(0);
+    }
+}
+.hero-info h1 {
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+.hero-info p {
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.3s;
+    z-index: 1;
+}
+.hero-info a {
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.4s;
 }
 @media (min-width: 300px) and (max-width: 768px){
     .navbar-list{
