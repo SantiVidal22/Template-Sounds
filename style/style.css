@@ -469,6 +469,14 @@ footer{
         z-index: 2;
         display: none;
     }
+    .sesion{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .sesion iframe{
+        width: 80%
+    }
     main{
         gap: 50px;
     }
@@ -530,6 +538,15 @@ footer{
     }
     .studio-cards-container{
         flex-direction: column;
+    }
+    #rates{
+        height: unset;
+    }
+    .rates-card-container{
+        flex-direction: column;
+    }
+    .form{
+        width: 60%;
     }
 }
 @media (min-width: 768px) and (max-width: 1200px){
