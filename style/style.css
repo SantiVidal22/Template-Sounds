@@ -83,13 +83,14 @@ header{
 .navbar-list li a:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
+    transition-duration: 0.4s;
 }
 .hero-info a {
-    transition: all 0.2s ease-out;
+    transition: all 0.4s ease-out;
 }
 .hero-info a:hover {
     background-color: var(--cielo);
-    transition: all 0.2s ease-in;
+    transition: all 0.4s ease-in;
 }
 .boton .b1:hover{
     color: var(--text-black);
@@ -265,9 +266,11 @@ main{
     min-width: 100%;
     border: solid;
     padding: 8px;
+    transition: all 0.4s ease-out;
 }
 .client-info div a:hover{
     color: rgb(0, 204, 255);
+    transition: all 0.4s ease-in;
 }
 #rates{
     display: flex;
@@ -340,7 +343,6 @@ textarea{
     color: white;
 }
 .boton .b2{
-    border: 2px solid black;
     background: var(--btn-bg-white);
     color: rgb(0, 0, 0);
 }
@@ -452,6 +454,9 @@ footer{
     animation-delay: 0.4s;
 }
 @media (min-width: 300px) and (max-width: 768px){
+    .line{
+        animation-name: unset;
+    }
     .navbar-list{
         position: absolute;
         top: 65px;
