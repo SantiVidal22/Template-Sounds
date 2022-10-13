@@ -481,12 +481,13 @@ footer{
     }
     .services{
         padding: unset;
+        height: unset;
     }
     .sesion iframe{
         width: 80%
     }
     main{
-        gap: 50px;
+        gap: 30px;
     }
     .navbar-list a{
         font-size: 18px;
@@ -548,6 +549,9 @@ footer{
     .studio-cards-container{
         flex-direction: column;
         gap: 20px;
+    }
+    #info{
+        padding: unset;
     }
     #rates{
         height: unset;
