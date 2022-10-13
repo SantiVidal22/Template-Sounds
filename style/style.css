@@ -480,8 +480,9 @@ footer{
         gap: 30px;
     }
     .services{
+        display: flex;
         padding: unset;
-        height: unset;
+        height: 200px;
     }
     .sesion iframe{
         width: 80%
@@ -550,6 +551,10 @@ footer{
         flex-direction: column;
         gap: 20px;
     }
+    .info-cards-container{
+        flex-direction: column;
+        flex-wrap: unset;
+    }
     #info{
         padding: unset;
     }
@@ -565,6 +570,7 @@ footer{
     #clients{
         flex-direction: column;
         order: 0;
+        padding: unset;
     }
     #studio p{
         width: unset;
@@ -572,12 +578,14 @@ footer{
     }
     #studio{
         padding: unset;
+        gap: 20px;
     }
     .client-card{
         order: 2;
     }
     .client-info{
         order: 1;
+        width: 80%;
     }
 }
 @media (min-width: 768px) and (max-width: 1200px){
